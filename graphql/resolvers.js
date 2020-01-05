@@ -1,14 +1,12 @@
-const yuri = {
-  name: "yuri",
-  gender: "female",
-  hobby: "playing yoga",
-  age: 3
-}
+import { people, getById } from "./db";
 
 const resolvers = {
   Query: {
-    /* name: () => "yuriyoon" */
-    person: () => yuri
+    people: () => people,
+    /** 
+    * It's ok either (parent, args) or (_, args)
+    */
+    person: (_, { id }) => getById(id)
   }
 }
 

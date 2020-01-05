@@ -1,10 +1,12 @@
-type yuri{
+type Person {
+  id: Int!
   name: String!
   gender: String!
   age: Int!
   hobby: String!
 }
 
-type Query{
-  person: yuri!
+type Query {
+  people: [Person]!
+  person(id: Int!): Person
 }
