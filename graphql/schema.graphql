@@ -1,0 +1,10 @@
+type yuri{
+  name: String!
+  gender: String!
+  age: Int!
+  hobby: String!
+}
+
+type Query{
+  person: yuri!
+}
