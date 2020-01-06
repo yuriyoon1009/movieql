@@ -1,4 +1,4 @@
-export const people = [{
+/* export const people = [{
     id: 1,
     name: "yuri",
     gender: "female",
@@ -33,9 +33,9 @@ export const people = [{
     hobby: "sleeping",
     age: 3
   }
-]
+] */
 
-let movies = [
+export let movies = [
   {
     id: 0,
     name: "Star Wars - The new one",
@@ -56,7 +56,7 @@ let movies = [
 export const getMovies = () => movies;
 
 export const getById = id => {
-  const foundMovie = movies.find(movie => String(id) === movie.id); 
+  const foundMovie = movies.find(movie => id === movie.id); 
   return foundMovie;
 }
 
